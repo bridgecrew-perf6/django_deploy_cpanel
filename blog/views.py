@@ -9,6 +9,7 @@ def post_list(request):
     return render(request, 'blog/post/list.html', {'posts': posts})
 """
 
+
 class PostListView(ListView):
     queryset = Post.published.all()
     context_object_name = 'posts'
